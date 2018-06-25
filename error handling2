@@ -1,0 +1,26 @@
+ function dividing() { 
+            var numerator = Number(prompt("LEASE eNTER NUMBERATOR"));
+         
+            var denominator = Number(prompt("PLEASE eNTER denominator"));
+             
+        try {
+
+            if (denominator == 0) {
+                throw {
+                    error: "Dividing by zero is not accepted",
+                    message: "Denominator can not be 0"
+                }
+
+            }
+            else {
+
+                document.write("Result" + (numerator / denominator));
+            }
+           
+        }
+        catch (e) {
+                  document.write("Error" + e.error);
+                  document.write("Message" + e.message);
+            }
+        }
+        dividing();
