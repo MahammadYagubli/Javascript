@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript" lang="javascript">
+        function errorfunc()   {
+
+            alert("Image is not exist " );
+            
+        }
+
+        
+
+    </script>
+    <style type="text/css">
+        .auto-style1 {
+            width: 149px;
+        }
+    </style>
+</head> 
+<body>
+    <form id="form1" runat="server">
+        <div>
+          <img src="necexedsd.jpg" onerror="errorfunc()"/>
+        </div>
+    </form>
+</body>
+</html>
