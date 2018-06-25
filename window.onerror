@@ -1,0 +1,7 @@
+  window.onerror = function (msg, url, line) {
+
+            alert("Message: " + msg + "\nURL: " + "\NlINE:" + line);
+            return true;
+        }
+
+        firenonexistfunction();
