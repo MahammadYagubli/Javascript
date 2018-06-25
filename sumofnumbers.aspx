@@ -5,6 +5,7 @@
 
         function addnumbers() { 
         var sum = 0;
+       //     we will be albe to acccess to the arguments
         document.write("count of numbers" + arguments.length + "<br/>");
             for (var i = 0; i < arguments.length; i++) {
                 sum = sum + arguments[i]
