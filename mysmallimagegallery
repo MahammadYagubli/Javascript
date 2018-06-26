@@ -1,0 +1,59 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="javascript.aspx.cs" Inherits="Rechapte.javascript" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+   
+   
+    <style type="text/css">
+        .auto-style1 {
+            width: 149px;
+        }
+        .mystyle {
+        width:600px;
+        height:600px;
+        
+        }
+         .iconstyle {
+        width:50px;
+        height:50px;
+        border:3px solid red;
+        
+        }
+    </style>
+     <script type="text/javascript" lang="javascript">
+        function myfunction(event) {
+            event =event||   window.event;
+            var targeticon = event.target||event.srcElement;
+         //   if (targeticon == "img") {
+                document.getElementById("chosenicon").src = targeticon.getAttribute("src");
+        //        alert("You clicked on imiage item");
+        //    }
+         
+ 
+        }
+
+    </script>
+</head> 
+<body>
+    <form id="form1" runat="server">
+        <img  class="mystyle" id="chosenicon" src="images/1.jpg"/>
+       <div id="iconscontainer" onclick="myfunction(event)">
+             <img  class="iconstyle" src="images/1.jpg"/>
+             <img  class="iconstyle" src="images/2.jpg"/>
+             <img  class="iconstyle" src="images/3.jpg"/>
+             <img src="images/4.jpg"  class="iconstyle"/>
+             <img src="images/5.jpg" class="iconstyle" />
+             <img src="images/6.jpg" class="iconstyle"/>
+             <img src="images/7.jpg" class="iconstyle"/>
+             <img src="images/8.jpg" class="iconstyle"/>
+             <img src="images/9.jpg"  class="iconstyle"/>
+             <img src="images/10.jpg"  class="iconstyle"/>
+             <img src="images/11.jpg" class="iconstyle" />
+
+       </div>
+    </form>
+</body>
+</html>
