@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+      
+        function getEventDetails(event) {
+            var eventDetails = "Event Name=" + event.type + "<br/> X" 
+                + event.clientX + "<br/>Y=" + event.clientY +
+                "<br/>TargeType=" + event.target.type+"<br/>Targe Tag Name=" + event.target.tagName;
+
+            document.getElementById("detail").innerHTML = eventDetails;
+        }
+      
+        </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <input type="button"  id="buttonn" onclick="getEventDetails(event)" />
+       <div id="detail"></div>
+            
+        </div>
+    </form>
+</body>
+</html>
