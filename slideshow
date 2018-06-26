@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+        var intervalId;
+        function changeImage() {
+
+            var imagesrc = document.getElementById("image").getAttribute("src");
+            var currentImagenumber = imagesrc.substring(imagesrc.lastIndexOf("/") + 1, imagesrc.lastIndexOf("/") + 2);
+            if (currentImagenumber == 9) {
+                currentImagenumber = 0;
+
+            }
+            newimage = "/images/" + (Number(currentImagenumber) + 1) + ".jpeg";
+          
+         //   document.getElementById("result").innerHTML = newimage;
+            document.getElementById("image").setAttribute("src", newimage);
+          
+
+        }
+       function startslideshow(){
+
+            intervalId = setInterval(changeImage, 500);
+
+        }
+       function  sstopslideshow(){
+
+            clearInterval(intervalId);
+
+        }
+      
+        </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <img src="/images/1.jpeg" id="image" style="height:100px; width:100px"/>
+                        <input type="button"  value="Startslideshow" onclick=" startslideshow()" />
+              <input type="button"  value="Stopslideshow" onclick="sstopslideshow()" />
+            <div id="result"></div>
+        </div>
+    </form>
+</body>
+</html>
