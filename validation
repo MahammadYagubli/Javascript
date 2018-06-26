@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+        function validatecontrol(controlId) {
+            var control = document.getElementById(controlId);
+            control.style.color = "white";
+            if (control.value == "") {
+
+                control.style.backgroundColor = 'red';
+
+
+            }
+            else {
+
+
+                control.style.backgroundColor = "green";
+            } 
+
+        }
+
+        </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+                 <input type="text"  id="txtname" onblur="validatecontrol('txtname')"  onkeyup="validatecontrol('txtname')"/>
+            <input type="text"  id="txtsurname" onblur="validatecontrol('txtsurname')"  onkeyup="validatecontrol('txtsurname')"/>
+          
+        </div>
+    </form>
+</body>
+</html>
