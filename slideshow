@@ -15,7 +15,7 @@
             }
             newimage = "/images/" + (Number(currentImagenumber) + 1) + ".jpeg";
           
-         //   document.getElementById("result").innerHTML = newimage;
+       
             document.getElementById("image").setAttribute("src", newimage);
           
 
