@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+      
+
+        function ad(controlid) {
+            var btn = document.getElementById(controlid);
+           alert("mouserover");
+         btn.style.background = 'blue';
+            //btn.style.color = 'yellow';
+           
+        }
+           function da() {
+        alert("mouseout");
+           yle.background='yellow';
+           //   btn.style.color = 'white';
+        }
+      
+        </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <input type="button"  id="buttonn" onmouseover="ad('buttonn')" onmouseout="da('buttonn')"  value="Click me" />
+       
+            
+        </div>
+    </form>
+</body>
+</html>
