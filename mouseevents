@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript"  >
+        function getMouseClickCode(event) {
+            event = event || window.event;
+            document.getElementById("txtarea").value += event.type + "\r\n";
+        }
+        function cleartext() {
+            document.getElementById("txtarea").value = "";
+        }
+
+        
+      </script>
+   </head>
+<body>
+    <form id="form1" runat="server">
+       <input type="button"
+            id="btnclick" 
+           value="Button"
+             onmouseout="getMouseClickCode(event)"
+             onmousedown="getMouseClickCode(event)"
+ onmousemove ="getMouseClickCode(event)"
+             onmouseover="getMouseClickCode(event)"
+             onmouseup="getMouseClickCode(event)"
+            onmousewheel="getMouseClickCode(event)"
+            onclick="getMouseClickCode(event)"
+          
+            />
+        <input type="button" id="btnclear" value="Clear"/>
+        <br/><br/>
+        <textarea id="txtarea" cols="20" rows="10"></textarea>
+    </form>
+    
+</body>
+</html>
