@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript"  >
+    
+        function check() {
+ var value = document.getElementById("txtarea").value;
+            var result = value.match(/\d+/g);
+            for (var i = 0; i < result.length; i++) {
+                document.getElementById("result").value += result[i]+ "\r\n";
+            }
+ 
+                          }
+        
+        
+      </script>
+   </head>
+<body>
+    <form id="form1" runat="server">
+      <textarea id="txtarea" cols="20" rows="10"></textarea>
+        <input type="button"
+            id="btnclick" 
+           value="Button"
+            
+            onclick="check()"
+          
+            />
+    
+        <textarea id="result" cols="20" rows="10"></textarea>
+    </form>
+    
+</body>
+</html>
