@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript"  >
+        var popupwindow;
+        function openPopup() {
+            popupwindow = window.open("http://google.com", "My Window", "height=250,  width=250");
+            
+        }
+        function closepopup() {
+            popupwindow.close();
+        }
+
+        
+      </script>
+   </head>
+<body>
+    <form id="form1" runat="server">
+       <input type="button"
+            id="btnclick" 
+           value="Button"
+            
+            onclick="openPopup()"
+          
+            />
+        <input type="button" onclick="closepopup()" id="btnclear" value="Clear"/>
+        <br/><br/>
+        <textarea id="txtarea" cols="20" rows="10"></textarea>
+    </form>
+    
+</body>
+</html>
