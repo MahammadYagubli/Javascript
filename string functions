@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript"  >
+  var string = "john has 230421312 in account. JOHN is 35";
+   document.getElementById("txtarea").value = string;
+     
+        function matchfnc() {
+            var list = string.math(/\d+/g);
+            for (var i = 0; i < list.length; i++) {
+
+                document.getElementById("result").value += list[i]+"";
+            }
+             
+            }
+           function fncsearch() {
+
+ document.getElementById("result").value=  string.search(/\d+/gi);
+        }
+          function fncreplace() {
+
+         document.getElementById("result").value= (string.replace(/\d+/g,"<number>"));
+
+          }
+          function fncsplit() {
+
+            document.getElementById("result").value= (string.split(/\d+/g));
+
+          }
+
+        
+        
+      </script>
+   </head>
+<body>
+    <form id="form1" runat="server">
+      <textarea id="txtarea" cols="20" rows="10"></textarea>
+        <input type="button"      id="match"      value="Match"     onclick="matchfnc()"  />
+            <input type="button"      id="replace"      value="replace"     onclick="fncreplace()"  />
+                <input type="button"      id="search"      value="search"     onclick="fncsearch()"  />
+              <input type="button"      id="split"      value="split"     onclick="fncsplit()"  />
+  
+         <textarea id="result" cols="20" rows="10"></textarea>
+    </form>
+    
+</body>
+</html>
