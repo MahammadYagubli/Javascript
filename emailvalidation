@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript"  >
+  var string = "john has 230421312 in account. JOHN is 35";
+   document.getElementById("txtarea").value = string;
+     
+        function check() {
+            var textbox = document.getElementById("txtarea");
+            var email = textbox.value;
+            var emailregex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+            textbox.style.backgroundColor = "white";
+            if (emailregex.test(email)) {
+                textbox.style.backgroundColor = "green";
+            }
+            else {
+                textbox.style.backgroundColor = "red";
+            }
+            
+        }
+          
+         
+        
+      </script>
+   </head>
+<body>
+    <form id="form1" runat="server">
+      <textarea id="txtarea" onkeyup="check()" ></textarea>
+  
+    </form>
+    
+</body>
+</html>
