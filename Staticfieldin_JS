@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+       <script type="text/javascript">
+           function calculatespace(radius) {
+
+               calculatespace.PI = 3.14;
+               this.Radius = radius;
+               this.calculate = function () {
+
+                   return calculatespace.PI * this.Radius * this.Radius;
+
+               }
+
+           }
+           var cal = new calculatespace(10);
+           alert(cal.calculate());
+
+           
+           </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+      
+   </form>     
+</body>
+</html>
