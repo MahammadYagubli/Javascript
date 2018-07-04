@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+       <script type="text/javascript">
+           function stuff(name) {
+               this.name = name;
+
+           }
+           stuff.prototype.getname=function (){
+
+               return this.name;
+           }
+
+           var obj1 = new stuff("Mahammad");
+           var obj2 = new stuff("Diana");
+           alert("obj1.name= " + obj1.getname());
+           alert("obj2.name= " + obj2.getname());
+
+           </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+      
+   </form>     
+</body>
+</html>
