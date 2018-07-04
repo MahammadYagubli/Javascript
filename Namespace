@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript" src="NewFolder1/A.js"></script>
+     <script type="text/javascript" src="NewFolder1/B.js"></script>
+    <script type="text/javascript">
+
+        document.write(obj.A.stuff("Mahammad", "Yagubli").getfullname());
+        document.write(obj.B.stuff("Mahammad", "Maqqa","Yagubli").getfullname());
+       </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+      
+   </form>     
+</body>
+</html>
+--------------------------------------------
+A.js
+
+var obj = obj || {};
+obj.A = obj.A || {};
+
+obj.A.stuff = function(firstname, lastname) {
+    
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.getfullname = function () {
+        return "obj.A.stuff"+ this.firstname + this.lastname + "<br/>";
+    }
+    return this;
+
+}
+-----------------------------------
+B.js
+
+var obj = obj || {};
+obj.B = obj.B || {};
+
+obj.B.stuff =function (firstname, middlename, lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.middlename = middlename;
+    this.getfullname = function () {
+        return "obj.B.stuff"+this.firstname + this.middlename + this.lastname+"<br/>";
+    }
+    return this;
+
+}
