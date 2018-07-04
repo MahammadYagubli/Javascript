@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript" src="NewFolder1/A.js"></script>
+     <script type="text/javascript" src="NewFolder1/B.js"></script>
+    <script type="text/javascript">
+
+     document.write(stuff("Mahammad", "Yagubli").firstname);
+       </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+      
+   </form>     
+</body>
+</html>
+--------------------------------
+A.js
+
+
+
+function stuff(firstname, lastname) {
+    document.write("I am from A.JS");
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.getfullname = function () {
+        return this.firstname + this.lastname;
+    }
+
+
+}
+----------------------
+B.JS
+function stuff(firstname, middlename, lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.middlename = middlename;
+    this.getfullname = function () {
+        return this.firstname + this.middlename + this.lastname;
+    }
+
+
+}
