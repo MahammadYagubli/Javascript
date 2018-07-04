@@ -1,0 +1,41 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="started.aspx.cs" Inherits="Rechapte.started" %>
+
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="NewFolder1/A.js"></script>
+       <script type="text/javascript">
+           stuff.prototype.getname=function (){
+
+               return this.name.toUpperCase();
+           }
+           function stuff(name) {
+               this.name = name;
+
+           }
+        
+
+           var obj1 = new stuff("Mahammad");
+           var obj2 = new stuff("Diana");
+           alert("obj1.name= " + obj1.getname());
+           alert("obj2.name= " + obj2.getname());
+
+           </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+      
+   </form>     
+</body>
+</html>
+------------------------
+A.JS
+
+stuff.prototype.getname = function () {
+
+    return this.name;
+}
+
+ 
