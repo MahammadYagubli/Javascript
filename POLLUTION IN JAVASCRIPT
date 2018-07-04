@@ -29,7 +29,7 @@ function stuff(firstname, lastname) {
     this.getfullname = function () {
         return this.firstname + this.lastname;
     }
-
+return this;
 
 }
 ----------------------
@@ -42,5 +42,6 @@ function stuff(firstname, middlename, lastname) {
         return this.firstname + this.middlename + this.lastname;
     }
 
+return this;
 
 }
