@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+       <script type="text/javascript">
+           function def(name, age) {
+               _name = name;
+               _age = age;
+               Object.defineProperty(this, "age",{
+                   set: function (value) {
+                       if (value < 1 || value > 100) {
+                           alert("invalid age");
+
+                       }
+                       else {
+                           _age = value;
+                       }
+                   },
+                   get: function () {
+                       return _age;
+                   }
+
+               })
+
+               Object.defineProperty(this, "name",{
+                   get: function () {
+                       return _name;
+                   }
+               })
+
+           }
+           var def = new def("Mahammad", 100);
+           alert("def.name="+def.name+"def.age"+def.age);
+           def.name = "Yakub";
+           def.age = "99";
+             alert("def.name="+def.name+"def.age"+def.age);
+           </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+      
+   </form>     
+</body>
+</html>
