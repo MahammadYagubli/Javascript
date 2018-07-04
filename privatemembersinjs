@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+       <script type="text/javascript">
+           function stuff(firstname, lastname) {
+
+               this.firstname = firstname;
+               this.lastname = lastname;
+               var privatefullname;
+               var getprivatefullname=function (){
+
+                   privatefullname = firstname + "  " + lastname;
+                   return privatefullname;
+
+               }
+               this.fullaccesmethod = function () {
+                   return getprivatefullname();
+
+               }
+               stuff.prototype.publicegetfullname = function () {
+                   return this.fullaccesmethod();
+               }
+           }
+
+           var stuff = new stuff("Mahammad", "Yagubli");
+           stuff.privatefullname;
+           stuff.privatefullname = "private full name";
+           stuff.publicegetfullname();
+           document.write(stuff.privatefullname);
+            
+
+           </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+      
+   </form>     
+</body>
+</html>
