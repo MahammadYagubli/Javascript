@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script>
+        window.onload = function () {
+            if (document.cookie.length != 0) {
+                var values = document.cookie.split("=");
+                document.bgColor = values[1];
+                document.getElementById("select").value = values[8];
+            }
+        }
+
+        function setcolor(){ 
+        var selectedcolor = document.getElementById("select").value;
+        if (selectedcolor != "Select Color") {
+            document.bgColor = selectedcolor;
+            document.cookie = "color=" + selectedcolor + ";expires=Mon, 09 July 2018 01:00:00 UTC; path=/";
+        }}
+           </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <select id="select" onchange="setcolor()">
+                <option value="Select Color">Select Color</option>
+                <option value="Red">Red</option>
+                <option value="Green">Green</option>
+                <option value="Blue">Blue</option>
+
+
+            </select>
+        </div>
+    </form>
+</body>
+</html>
