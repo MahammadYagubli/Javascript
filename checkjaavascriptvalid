@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style>
+    </style>
+
+    <script type="text/javascript">
+        function onkeyup(controlid) {
+            var control = document.getElementById(controlid);
+            if (control.value == "") {
+                control.style.background = "red";
+            }
+
+            else {
+                  control.style.background= "blue";
+
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <form id="form1" runat="server">
+        <noscript>
+            <style type="text/css">
+                .container {
+                    display: none;
+                }
+            </style>
+            </noscript>
+                <h1>It seems your Javascript has benn disabled</h1>
+                <div class="container">
+                    Name:  <input type="text" id="name" onkeyup="onkeyup('name')" onblur="onkeyup('name')" />
+                    Surname:  <input type="text" id="surname" onkeyup="onkeyup('surname')" onblur="onkeyup('surname')" />
+                </div>
+</form>
+</body>
+</html>
